@@ -1,4 +1,9 @@
-import express from "express"
+import express from "express";
+import morgan from "morgan";
+import helmet from "helmet";
+import cookieparser from "cookie-parser";
+import bodyparser from "body-parser";
+
 const app = express();
 const PORT = 4000;
 
@@ -10,18 +15,12 @@ const handleHome = (req, res) => res.send('Hello from home');
 
 const handleProfile = (req, res) => res.send("You are on my profile!");
 
-const betweenHome = (req, res, next) => {
-    console.log("HIHI i'm between HOME");
-    next();
-}
 
-const betweenTwo = (req, res, next) => {
-    console.log("i'm two!");
-    next()
-}
-
-
-app.use(betweenHome);
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extended: true}));
+app.use(cookieparser());
+app.use(helmet());
+app.use(morgan("dev"));
 
 app.get("/", handleHome);
 
