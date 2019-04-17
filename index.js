@@ -20,7 +20,10 @@ const betweenTwo = (req, res, next) => {
     next()
 }
 
-app.get("/", betweenHome, betweenTwo, handleHome);
+
+app.use(betweenHome);
+
+app.get("/", handleHome);
 
 app.get("/profile", handleProfile);
 
