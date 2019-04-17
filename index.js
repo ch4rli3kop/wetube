@@ -5,22 +5,22 @@ const PORT = 4000;
 
 const handleListening = () =>
     console.log(`Listening on: http://localhost:${PORT}`);
-// function handleListening(){
-//     console.log(`Listening on: http://localhost:${PORT}`);
-//}
 
 const handleHome = (req, res) => res.send('Hello from home');
-// function handleHome(req, res){
-//     console.log(req);
-//     res.send('Hello from home!');
-// }
 
 const handleProfile = (req, res) => res.send("You are on my profile!");
-// function handleProfile(req, res){
-//     res.send("You are on my profile!");
-// }
 
-app.get("/", handleHome);
+const betweenHome = (req, res, next) => {
+    console.log("HIHI i'm between HOME");
+    next();
+}
+
+const betweenTwo = (req, res, next) => {
+    console.log("i'm two!");
+    next()
+}
+
+app.get("/", betweenHome, betweenTwo, handleHome);
 
 app.get("/profile", handleProfile);
 
