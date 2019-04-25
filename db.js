@@ -4,7 +4,7 @@ export const videos = [
         title: 'Test Video1',
         description: "fucking hack video",
         views: 24,
-        videoFile: "https://archive.org/details/BigBuckBunny_124",
+        videoFile: "http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4",
         creator: {
             id: 15365,
             name: "charlie",
@@ -16,7 +16,7 @@ export const videos = [
         title: 'Test Video2',
         description: "fucking crazy video",
         views: 24,
-        videoFile: "https://archive.org/details/BigBuckBunny_124",
+        videoFile: "http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4",
         creator: {
             id: 15365,
             name: "charlie",
@@ -28,7 +28,7 @@ export const videos = [
         title: 'Test Video3',
         description: "fucking coool video",
         views: 24,
-        videoFile: "https://archive.org/details/BigBuckBunny_124",
+        videoFile: "http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4",
         creator: {
             id: 15365,
             name: "charlie",
@@ -40,7 +40,7 @@ export const videos = [
         title: 'Test Video4',
         description: "fucking awesome video",
         views: 24,
-        videoFile: "https://archive.org/details/BigBuckBunny_124",
+        videoFile: "http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4",
         creator: {
             id: 15365,
             name: "charlie",
